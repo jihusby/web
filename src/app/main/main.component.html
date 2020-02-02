@@ -2,7 +2,8 @@
   <a id="section0"></a>
   <section class="section mx-0">
     <div class="bg-gray">
-      <div class="container">
+      
+      <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
         <div class="row">
           <div class="main-image">
             <div class="title-container">
@@ -17,18 +18,14 @@
       </div>
       
     </div>
-    <div class="container">
+    <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
       <div class="row">
-        <div class="col-md-12 col-lg-12 col-xl-12 i-box-flex">
+        <div class="main-development">
           <div class="i-left hide-on-small">
-            <!--<div class="numbers">20</div>
-            <div class="numbers-text">år som bedrift</div>-->
             <div class="numbers">429</div>
             <div class="numbers-text">års erfaring med <br>IT-utvikling</div>
           </div>
           <div class="i-right">
-              <!--<div class="section-header-right">IT-konsulenter i verdensklasse</div>-->
-
               <b>Itema er et Trondheimsbasert konsulentselskap som tilbyr IT-ekspertise i verdensklasse. Vi er 100% ansatteid. 
               Det å ha lik rett til medbestemmelse inspirerer og skaper samhold. 
               For våre kunder vil det si at de møter engasjerte, inkluderende og kunnskapsrike konsulenter som brenner for de gode løsningene.</b><br><br>
@@ -49,14 +46,13 @@
     </div>
   
     <div class="bg-gray hide-on-small">
-      <div class="success-outer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-lg-12 col-xl-12 i-box-flex section-header">
-              Kundehistorier
-            </div>
-          </div>
-
+      <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
+        <div class="row">
+          <h2 class="section-header blue-header customer-header">
+            Kundehistorier
+          </h2>
+        </div>
+        <div>
           <div *ngFor="let successStoryRow of successStoryRows; let i = index;" class="row">
             <a [ngClass]="'success-bg-' + getIndex(u, i) + ' link-item col-md-6 col-lg-3 col-xl-3 success-thumb'"
               routerLink="/customer-stories"
@@ -71,8 +67,8 @@
               <div class="thumb-text link-item"><b>{{ story.title.rendered }}</b></div>
             </a>
           </div>
-        </div>
-      </div>      
+        </div> 
+      </div>
     </div>
     <div class="parallax-small">
       <p class="title">&nbsp;</p>
@@ -82,7 +78,7 @@
   <a id="section1" class="anchor"></a>
   <section class="section mx-0">
       <div class="bg-green">
-        <div class="container">
+        <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
           <div class="row">
             <h2 class="section-header blue-header competence-header">
               VÅR KOMPETANSE
@@ -172,19 +168,21 @@
     <a id="section2" class="anchor"></a>
     <section class="section mx-0">
       <div class="bg-white">
-        <div class="container">
-          <div class="row carreer">
-            <div class="carreer-inner">
-              <div class="section-header white-header">
-                BLI MED PÅ LAGET?
-              </div>
-              <div class="section-article white-header">
-                  Hos oss er det stor takhøyde og det legges godt til rette for videreutvikling for den enkelte. Itema er 100% eid av ansatte, og 
-                  alle har lik mulighet til eierandel. Vi kan love at det å eie sin egen arbeidsplass, det inspirerer! Det er i alles interesse at vi er i toppen både faglig og sosialt.<br><br>
+        <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
+          <div class="row">
+            <div class="carreer">
+              <div class="carreer-inner">
+                <div class="section-header white-header carreer-header">
+                  BLI MED PÅ LAGET?
+                </div>
+                <div class="section-article white-header">
+                    Hos oss er det stor takhøyde og det legges godt til rette for videreutvikling for den enkelte. Itema er 100% eid av ansatte, og 
+                    alle har lik mulighet til eierandel. Vi kan love at det å eie sin egen arbeidsplass, det inspirerer! Det er i alles interesse at vi er i toppen både faglig og sosialt.<br><br>
 
-                  Itema er kåret til Norges beste arbeidsplass – to ganger! Suksessoppskriften er spennende oppdrag, helt suverene ordninger og ikke minst – verdens beste kolleger!<br><br>
+                    Itema er kåret til Norges beste arbeidsplass – to ganger! Suksessoppskriften er spennende oppdrag, helt suverene ordninger og ikke minst – verdens beste kolleger!<br><br>
 
-                  Dersom du har lyst å jobbe i Trondheims beste fagmiljø innen systemutvikling, vil vi gjerne at du tar kontakt. Vi er alltid på utkikk etter flinke folk!
+                    Dersom du har lyst å jobbe i Trondheims beste fagmiljø innen systemutvikling, vil vi gjerne at du tar kontakt. Vi er alltid på utkikk etter flinke folk!
+                </div>
               </div>
             </div>
           </div>
@@ -195,44 +193,46 @@
     <a id="section3" class="anchor"></a>
     <section class="section mx-0">
       <div class="bg-gray semi-parallax">
-        <div class="container">
-          <div class="row contact">
-            <div class="contact-inner" style="float: left">
-              <div class="section-header-contact white-header">
-                KONTAKT OSS
+        <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
+          <div class="row">
+            <div class="contact">
+              <div class="contact-inner" style="float: left">
+                <div class="section-header-contact white-header">
+                  KONTAKT OSS
+                </div>
+                <div class="section-article white-header contact-article" style="height: 125px;">
+                    <div class="contact-image contact-article"><img src="assets/img/lone.jpg" style="width: 120px;"></div>
+                    <div class="contact-info contact-article">
+                      <b>Lone Madsen</b><br>
+                      Daglig leder<br><br>
+                      Tlf +47 917 81 227<br>
+                      <a class="white-header contact-link" href="mailto:lma@itema.no">lma@itema.no</a>
+                    </div>
+                </div>
+                <p>
+                <div class="section-article white-header contact-article" style="height: 125px;">
+                    <div class="contact-image contact-article"><img src="assets/img/bengt.jpg" style="width: 120px;"></div>
+                    <div class="contact-info contact-article">
+                        <b>Bengt Bendixen</b><br>
+                        Salgssjef<br><br>
+                        Tlf +47 454 83 738<br>
+                        <a class="white-header contact-link" href="mailto:beb@itema.no">beb@itema.no</a>
+                    </div>
+                </div>
+                <p>
+                <div class="section-article white-header contact-article" style="height: 120px;">
+                    <div class="contact-image contact-article"><img src="assets/img/robert.jpg" style="width: 120px;"></div>
+                    <div class="contact-info contact-article">
+                        <b>Robert Heggdal</b><br>
+                        Utviklingssjef<br><br>
+                        Tlf +47 901 40 552<br>
+                        <a class="white-header contact-link" href="mailto:rhe@itema.no">rhe@itema.no</a>
+                    </div>
+                </div>
               </div>
-              <div class="section-article white-header contact-article" style="height: 125px;">
-                  <div class="contact-image contact-article"><img src="assets/img/lone.jpg" style="width: 120px;"></div>
-                  <div class="contact-info contact-article">
-                    <b>Lone Madsen</b><br>
-                    Daglig leder<br><br>
-                    Tlf +47 917 81 227<br>
-                    <a class="white-header contact-link" href="mailto:lma@itema.no">lma@itema.no</a>
-                  </div>
+              <div class="map-container hide-on-small" style="float: right;">
+                  <div #mapContainer id="map"></div>
               </div>
-              <p>
-              <div class="section-article white-header contact-article" style="height: 125px;">
-                  <div class="contact-image contact-article"><img src="assets/img/bengt.jpg" style="width: 120px;"></div>
-                  <div class="contact-info contact-article">
-                      <b>Bengt Bendixen</b><br>
-                      Salgssjef<br><br>
-                      Tlf +47 454 83 738<br>
-                      <a class="white-header contact-link" href="mailto:beb@itema.no">beb@itema.no</a>
-                  </div>
-              </div>
-              <p>
-              <div class="section-article white-header contact-article" style="height: 120px;">
-                  <div class="contact-image contact-article"><img src="assets/img/robert.jpg" style="width: 120px;"></div>
-                  <div class="contact-info contact-article">
-                      <b>Robert Heggdal</b><br>
-                      Utviklingssjef<br><br>
-                      Tlf +47 901 40 552<br>
-                      <a class="white-header contact-link" href="mailto:rhe@itema.no">rhe@itema.no</a>
-                  </div>
-              </div>
-            </div>
-            <div class="map-container hide-on-small" style="float: right;">
-                <div #mapContainer id="map"></div>
             </div>
           </div>
         </div>      
