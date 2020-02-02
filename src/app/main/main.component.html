@@ -196,7 +196,7 @@
         <div class="i-container container"> <!-- CONTAINER / ROW / MAIN ELEMENT -->
           <div class="row">
             <div class="contact">
-              <div class="contact-inner" style="float: left">
+              <div class="contact-inner" style="float: left;">
                 <div class="section-header-contact white-header">
                   KONTAKT OSS
                 </div>
@@ -230,8 +230,10 @@
                     </div>
                 </div>
               </div>
-              <div class="map-container hide-on-small" style="float: right;">
+              <div class="map-container-outer">
+                <div class="map-container hide-on-small">
                   <div #mapContainer id="map"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -239,4 +241,3 @@
       </div>
     </section>
     <app-footer-component></app-footer-component>
-    

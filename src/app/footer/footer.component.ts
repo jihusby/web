@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  showOverlay: boolean;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showOverlay = false;
+  }
+
+  toggleOverlay() {
+    this.showOverlay = !this.showOverlay;
+    console.log('clicked: ', this.showOverlay);
+  }
 
 }
 

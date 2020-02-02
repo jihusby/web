@@ -1,26 +1,11 @@
   
 <section class="section mx-0">
-  <span class="section mx-0">
+  <span class="">
     <div class="bg-white">
       &nbsp;
-      <a class="anchor" name="faen1"></a>
-      <a class="anchor" id="faen2"></a>
-      <div class="" style="margin-top: 44px;">
-        <div class="container">
-          <!-- TODO: Fix temporary view -->
-          <span *ngIf="!successStories">
-            <div class="row">
-                <div class="col-md-12 col-lg-6 col-xl-6 hide-on-small success-image">&nbsp;
-              </div>
-              <div 
-                class="col-md-12 col-lg-6 col-xl-6"
-                [ngClass]="'success-bg-0'" style="height: 100%">
-                <strong class="success-2-header"></strong>
-                <span class="success-2-article">
-                </span>
-              </div>
-            </div>
-          </span>
+      <div class="i-container container" style="margin-top: 44px;">
+        <div class="">
+          
           <!-- SUCCESS LOOP LARGE -->
           <span *ngIf="successStories" class="hide-on-medium hide-on-small">
             <span *ngFor="let story of successStories; let i = index;">
@@ -60,6 +45,7 @@
             </span>
           </span>
           <!-- SUCCESS LOOP-->
+
           <!-- SUCCESS LOOP SMALL -->
           <span *ngIf="successStories" class="hide-on-large">
             <span *ngFor="let story of successStories; let i = index;">
@@ -93,4 +79,4 @@
     </div>
   </span>
 </section>
-<app-footer-component></app-footer-component>
+<app-footer-component *ngIf="successStories"></app-footer-component>

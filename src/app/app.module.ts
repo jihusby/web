@@ -9,6 +9,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { NavigationBarComponent } from './features/navigation-bar/navigation-bar.component';
 import { CacheMapService } from './services/cache-map';
 import { httpInterceptorProviders } from './http-interceptors';
+import {OverlayModule} from '@angular/cdk/overlay';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainComponent } from './main/main.component';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
