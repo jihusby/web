@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Itema</title>
+  
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDND2Uws6DxIDDCvFU2JfFgSd4PVyU3ZnE" type="text/javascript"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+  <script>
+
+      $(document).ready(function () {
+
+        $('.first-button').on('click', function () {
+          $('.animated-icon1').toggleClass('open');
+        });
+        $('.second-button').on('click', function () {
+          $('.animated-icon2').toggleClass('open');
+        });
+        $('.third-button').on('click', function () {
+          $('.animated-icon3').toggleClass('open');
+        });
+      }); 
+
+
+      $(function(){ 
+          var navMain = $(".navbar-collapse"); // avoid dependency on #id
+          // "a:not([data-toggle])" - to avoid issues caused
+          // when you have dropdown inside navbar
+          navMain.on("click", "a:not([data-toggle])", null, function () {
+            $('.animated-icon1').toggleClass('open');
+            $('.animated-icon2').toggleClass('open');
+            $('.animated-icon3').toggleClass('open');
+              navMain.collapse('hide');
+              
+          });
+      });
+
+  </script> 
+      
+</head>
+<body>
+  <app-root></app-root>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+
+@media (max-width: 767px) {
+
+  .main-image { 
+    text-align: center;
+    background-image: url('/assets/img/phone_header.jpg');
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position-y: 28px;
+    background-position-x: center;
+    margin-top: 30px;
+    padding-top: 180px;
+  }  
+  .medium {
+      display: none;
+  }    
+  .large {
+      display: block;
+  }    
+  .hide-on-small {
+      display: none;
+  }
+
+  .success {
+    min-height: 380px;  
+  }
+
+  .row {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100% !important;
+  }
+
+  .sjappa-text {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1em !important;
+    font-weight: bold;
+  }
+
+  .contact-article {
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-inner {
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .carreer-inner {
+    margin: 0px 0px 0px 0px;
+  }
+
+  
+  .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+  }
+  .navbar .navbar-collapse {
+      text-align: center;
+  }
+
+  .footer {
+    padding: 30px 0px 30px 0px;
+  }  
+
+  .footer-left {
+    width: 95%;
+  }  
+
+  .footer-right {
+    overflow: visible;
+    width: 5%;
+    padding-right: 0px; 
+  }  
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .large {
+      display: none;
+    }    
+    .medium {
+        display: block;
+    }    
+    .hide-on-medium {
+      display: none;
+    }    
+}
+
+@media (min-width: 768px) {
+  .hide-on-big {
+    display: none;
+  }    
+}
+
+@media (min-width: 992px) {
+    .medium {
+      display: none;
+    }    
+    .large {
+        display: block;
+    }    
+    .hide-on-large {
+      display: none;
+    }    
+}
+

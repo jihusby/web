@@ -1,0 +1,242 @@
+  
+  <a id="section0"></a>
+  <section class="section mx-0">
+    <div class="bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="main-image">
+            <div class="title-container">
+              <div class="title-bg">
+                <div class="title-text">
+                  <span class="sjappa-text">Vi&nbsp;eier sjappa&nbsp;sjøl</span><br><span style="font-size: 95%; font-weight: normal;">– det inspirerer!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-xl-12 i-box-flex">
+          <div class="i-left hide-on-small">
+            <!--<div class="numbers">20</div>
+            <div class="numbers-text">år som bedrift</div>-->
+            <div class="numbers">429</div>
+            <div class="numbers-text">års erfaring med <br>IT-utvikling</div>
+          </div>
+          <div class="i-right">
+              <!--<div class="section-header-right">IT-konsulenter i verdensklasse</div>-->
+
+              <b>Itema er et Trondheimsbasert konsulentselskap som tilbyr IT-ekspertise i verdensklasse. Vi er 100% ansatteid. 
+              Det å ha lik rett til medbestemmelse inspirerer og skaper samhold. 
+              For våre kunder vil det si at de møter engasjerte, inkluderende og kunnskapsrike konsulenter som brenner for de gode løsningene.</b><br><br>
+
+              Trenger du ekspertkompetanse i en periode uten at du ønsker å ansette? 
+              Eller har du behov for ekstra kapasitet i ditt IT-prosjekt for å rekke en viktig tidsfrist?<br><br>
+
+              Med en erfaren systemutvikler fra Itema kan du senke skuldrene og lettere lykkes med å nå dine mål. 
+              Itemakonsulentene tar ansvar, og er både rådgivere og effektive utviklere. Med solid og lang erfaring 
+              gir vi råd slik at du kan ta smarte og riktige teknologivalg. Vår kunnskap om metodikk og hensiktsmessige 
+              verktøy bidrar til en smidig utvikling av brukervennlige og robuste løsninger. Ønsker du å sette bort hele utviklingsprosjektet, 
+              så hjelper vi deg med det også.<br><br>
+
+              Til sammen har vi over 400 års erfaring!
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bg-gray hide-on-small">
+      <div class="success-outer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12 i-box-flex section-header">
+              Kundehistorier
+            </div>
+          </div>
+
+          <div *ngFor="let successStoryRow of successStoryRows; let i = index;" class="row">
+            <a [ngClass]="'success-bg-' + getIndex(u, i) + ' link-item col-md-6 col-lg-3 col-xl-3 success-thumb'"
+              routerLink="/customer-stories"
+              fragment="story{{story.id}}" 
+              *ngFor="let story of successStoryRow; let u = index;"
+              id="success-thumb-1"
+              (mouseover)="hover=story.id"
+              (mouseleave)="hover=-1"
+              [ngStyle]="hover===story.id ? 
+              { 'background-image': 'none' } : 
+              { 'background-image': 'url(' + getImgPath(story.title.rendered) + '_S.jpg)' }">
+              <div class="thumb-text link-item"><b>{{ story.title.rendered }}</b></div>
+            </a>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="parallax-small">
+      <p class="title">&nbsp;</p>
+    </div>
+  </section>
+
+  <a id="section1" class="anchor"></a>
+  <section class="section mx-0">
+      <div class="bg-green">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-header blue-header competence-header">
+              VÅR KOMPETANSE
+            </h2>
+            <div class="section-article competence-article">
+              Itema tilbyr utviklere, arkitekter, scrum mastere og rådgivning. I tillegg kan vi utføre dine prosjekter innenfor avtalte rammer. 
+              Vi deltar aktivt i våre fagmiljøer og har bidratt både ved å lede konferanser som Trondheim Developer Conference og EclipseCon Europe, 
+              samt ved å holde foredrag i større og mindre fora. Itema har spesialisert seg i systemutviklingsfaget, og kombinert med god delingskultur 
+              og spisset kompetanse tilbys våre eksperter innenfor følgende fagområder:
+              <br>&nbsp;
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-4">
+              <div class="competence">
+                <span class="blue-header">Frontend og web</span>
+                <p class="blue-article">
+                  Vi har bred kompetanse på alle de viktigste rammeverkene og programmeringsspråkene for å kunne utvikle tidsriktige og robuste frontend applikasjoner.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Mobil plattform</span>
+                <p class="blue-article">
+                  Vi har solid kompetanse på iOS og Android, og alle relevante kryssplattform rammeverk.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Backend</span>
+                <p class="blue-article">
+                  Alle våre utviklere har erfaring med verktøy og språk som kreves for å kunne være en god backend utvikler, hvor erfaringen spenner fra de tradisjonelle til et stadig større tilfang av nye. I tillegg har vi også kompetanse på avansert anbefalingsteknologi som gjerne benyttes for å analysere store datamengder ("Big Data").
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Databaser</span>
+                <p class="blue-article">
+                  I Itema har vi spesialister på analyse, modellering og ytelsesoptimalisering på en rekke databasesystemer, alt fra de store kjente til no-sql databaser.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-4">
+              <div class="competence">
+                <span class="blue-header">Devops</span>
+                <p class="blue-article">
+                  Vi leverer konsulenter som har lang erfaring med systemutvikling og som dessuten har lang erfaring med kontinuerlig integrasjon, bygging, skalering og produksjonssetting av applikasjoner.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Systemarkitektur</span>
+                <p class="blue-article">
+                  Vi har har hatt ansvar for systemarkitektur i mange større og mindre prosjekter. Våre konsulenter er sterke på å forstå kundens domene. Vi mener dette er en nødvendig egenskap for å kunne levere en god systemarkitektur.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Visualisering</span>
+                <p class="blue-article">
+                  Flere av våre konsulenter har gjennomført store prosjekter som inkluderer avansert 3D-visualisering. Vi leverer også kompetanse på visualisering innen spillteknologi på mobile enheter.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-4">
+              <div class="competence">
+                <span class="blue-header">Software Craftsmanship</span>
+                <p class="blue-article">
+                  Alle våre konsulenter har lang erfaring med smidige arbeidsprosesser og bruker Scrum og Kanban, eller varianter av disse i prosjektsammenheng. Vi har erfaring med testdrevet utvikling (TDD), code review og en rekke verktøy og andre metoder som sikrer gode utviklingsprosesser.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Åpen kildekode</span>
+                <p class="blue-article">
+                  Itema er veldig positive til bruk av åpen kildekode i utviklingsprosjekter og har blant annet i mange år deltatt som et aktivt medlem av Eclipse Foundation Inc., en av verdens ledende åpen-kildekode stiftelser. En av våre konsulenter sitter også i styret til stiftelsen, og deltar som prosjektleder, mentor og utvikler på flere prosjekter.
+                </p>
+              </div>
+              <div class="competence">
+                <span class="blue-header">Rådgivning</span>
+                <p class="blue-article">
+                  Våre rådgivere er profesjonelle støttespillere som hjelper deg å finne den beste veien til riktig løsning. Vi har lang erfaring med å etablere god kommunikasjon mellom forretning og utvikling, og kan lede eller gi råd i endringsprosesser, og forbedre eller lede pågående prosjekter.
+                </p>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </section>
+
+    <a id="section2" class="anchor"></a>
+    <section class="section mx-0">
+      <div class="bg-white">
+        <div class="container">
+          <div class="row carreer">
+            <div class="carreer-inner">
+              <div class="section-header white-header">
+                BLI MED PÅ LAGET?
+              </div>
+              <div class="section-article white-header">
+                  Hos oss er det stor takhøyde og det legges godt til rette for videreutvikling for den enkelte. Itema er 100% eid av ansatte, og 
+                  alle har lik mulighet til eierandel. Vi kan love at det å eie sin egen arbeidsplass, det inspirerer! Det er i alles interesse at vi er i toppen både faglig og sosialt.<br><br>
+
+                  Itema er kåret til Norges beste arbeidsplass – to ganger! Suksessoppskriften er spennende oppdrag, helt suverene ordninger og ikke minst – verdens beste kolleger!<br><br>
+
+                  Dersom du har lyst å jobbe i Trondheims beste fagmiljø innen systemutvikling, vil vi gjerne at du tar kontakt. Vi er alltid på utkikk etter flinke folk!
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </section>
+
+    <a id="section3" class="anchor"></a>
+    <section class="section mx-0">
+      <div class="bg-gray semi-parallax">
+        <div class="container">
+          <div class="row contact">
+            <div class="contact-inner" style="float: left">
+              <div class="section-header-contact white-header">
+                KONTAKT OSS
+              </div>
+              <div class="section-article white-header contact-article" style="height: 125px;">
+                  <div class="contact-image contact-article"><img src="assets/img/lone.jpg" style="width: 120px;"></div>
+                  <div class="contact-info contact-article">
+                    <b>Lone Madsen</b><br>
+                    Daglig leder<br><br>
+                    Tlf +47 917 81 227<br>
+                    <a class="white-header contact-link" href="mailto:lma@itema.no">lma@itema.no</a>
+                  </div>
+              </div>
+              <p>
+              <div class="section-article white-header contact-article" style="height: 125px;">
+                  <div class="contact-image contact-article"><img src="assets/img/bengt.jpg" style="width: 120px;"></div>
+                  <div class="contact-info contact-article">
+                      <b>Bengt Bendixen</b><br>
+                      Salgssjef<br><br>
+                      Tlf +47 454 83 738<br>
+                      <a class="white-header contact-link" href="mailto:beb@itema.no">beb@itema.no</a>
+                  </div>
+              </div>
+              <p>
+              <div class="section-article white-header contact-article" style="height: 120px;">
+                  <div class="contact-image contact-article"><img src="assets/img/robert.jpg" style="width: 120px;"></div>
+                  <div class="contact-info contact-article">
+                      <b>Robert Heggdal</b><br>
+                      Utviklingssjef<br><br>
+                      Tlf +47 901 40 552<br>
+                      <a class="white-header contact-link" href="mailto:rhe@itema.no">rhe@itema.no</a>
+                  </div>
+              </div>
+            </div>
+            <div class="map-container hide-on-small" style="float: right;">
+                <div #mapContainer id="map"></div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </section>
+    <app-footer-component></app-footer-component>
+    
