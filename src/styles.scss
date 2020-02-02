@@ -12,7 +12,6 @@
   }
 
   html {
-    font-family: "Open Sans";
     overflow: visible;
     font-size: 1em;
   }
@@ -101,7 +100,7 @@
     flex: 1;  /* grow */
     padding: 40px 0px 40px 0px;
     margin: 0px 0px 0px 0px;
-    font-size: 90%;
+    font-size: 100%;
     line-height: 130%;
   }
   .i-left {
@@ -196,34 +195,6 @@
     background-size: cover;      
   }
 
-  .bg-white {
-    background-color: white;
-  }
-
-  .bg-light-gray {
-    background-color: #EFEFEF;
-  }  
-  .bg-gray {
-    background-color: #e4e4e5;
-  }
-  .bg-green {
-    background-color: #D1E4EF;
-  }
-  .bg-dark-gray {
-    background-color: #58585B;
-  }
-  .bg-dark-blue {
-    background-color: #003851;
-  }
-  
-  .blue-header {
-    color: #003851;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-  .blue-article {
-    font-size: 80%;
-  }
   .white-header {
     color: white;
   }
@@ -252,7 +223,6 @@
     margin: 0px 0px 10px 0px;
   }
   .section-article {
-    font-size: 90%;
     line-height: 20px;
     width: 100%;
     padding: 0px 0px 0px 0px;
@@ -291,12 +261,12 @@
     margin: 0px 0px 0px 0px;
   }
   .numbers {
-    font-family: 'Helvetica';
+    font-family: 'Catamaran', 'Arial';
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     line-height: 100px; /* FIXME: verify height */
     color: #EE7219;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 500%;
     line-height: 80px;
   }
@@ -550,6 +520,7 @@
           float: left;
         }
       
+
         .bg-white {
           background-color: white;
         }
@@ -558,7 +529,8 @@
           background-color: #EFEFEF;
         }  
         .bg-gray {
-          background-color: #E9E7E6;
+          // background-color: #E9E7E6;
+          background-color: #e4e4e5;
         }
         .bg-green {
           background-color: #D1E4EF;
@@ -570,11 +542,13 @@
           background-color: #003851;
         }
         .blue-header {
+          color: #003851;
           text-transform: uppercase;
           font-weight: bold;
         }
         .blue-article {
-          font-size: 80%;
+          font-size: 100%;
+          line-height: 20px;
         }
         .white-header {
           color: white;
