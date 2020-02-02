@@ -49,7 +49,8 @@ const routerOptions: ExtraOptions = {
     RouterModule.forRoot(routes, routerOptions),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OverlayModule,
   ],
   exports: [RouterModule],
 

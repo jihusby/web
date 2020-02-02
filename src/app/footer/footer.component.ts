@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, TemplateRef } from '@angular/core';
+import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
+import { TemplatePortal } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-footer-component',
@@ -7,15 +9,34 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   showOverlay: boolean;
-  constructor() {}
+
+  overlayRef: any;
+
+  constructor(
+    private overlay: Overlay,
+    private viewContainerRef: ViewContainerRef) {}
 
   ngOnInit() {
     this.showOverlay = false;
   }
 
-  toggleOverlay() {
-    this.showOverlay = !this.showOverlay;
-    console.log('clicked: ', this.showOverlay);
+  openWithTemplate(tpl: TemplateRef<any>) {
+    const configs = new OverlayConfig({
+      hasBackdrop: true,
+      panelClass: ['modal', 'is-active'],
+      backdropClass: 'modal-background',
+     });
+
+    this.overlayRef = this.overlay.create(configs);
+    this.overlayRef.backdropClick().subscribe(() => {
+
+      this.close();
+    });
+    this.overlayRef.attach(new TemplatePortal(tpl, this.viewContainerRef));
+  }
+
+  close(){
+    this.overlayRef.dispose();
   }
 
 }

@@ -7,10 +7,10 @@
             <div class="footer bg-gray">
               <div class="footer-left">
                 ITEMA AS<br>
-                Brøsetvegen 164B, 7069 Trondheim<br>
+                Brøsetvegen&nbsp;164B<br>7069&nbsp;Trondheim<br>
                 <a class="footer-link" href="mailto:firmapost@itema.no">firmapost@itema.no</a>
                 <br><br><br>
-                <a class="footer-link" (click)="openOverlay()">Personvernerklæring</a>
+                <a class="footer-link" (click)="openWithTemplate(tpl)">Personvernerklæring</a>
                 <br><br><br>
                 <span>2020 itema.no - Utviklet av Itema | </span><span>Design:&nbsp;<a class="footer-link" href="http://www.sereklame.no" target="_blank">Se&nbsp;Reklame</a></span>
               </div>
@@ -52,3 +52,37 @@
         </div>
       </div>
     </section>
+
+    <ng-template #tpl>
+      <div class="modal-card">
+      <header class="modal-card-head">
+        <div class="blue-header competence-header">Personvernerklæring</div>
+      </header>
+      <section class="modal-card-body blue-article overlay-card">
+        Denne personvernerklæringen forteller hvordan Itema samler inn og bruker informasjon om besøkende på https://www.itema.no.<br><br>
+        
+        <b>Behandling av personopplysninger på www.itema.no</b><br>
+        Det samles ikke inn personopplysninger på våre nettsider. Sircon er vår driftsleverandør for Itema.no.<br><br>
+        
+        <b>Nettstatistikk</b>
+        Itemas driftsleverandør samler inn anonymisert nettstatistikk om besøkende på itema.no ved hjelp av Google Analytics. 
+        Denne informasjonen benyttes kun til å forbedre nettsidene. Opplysningene kan ikke benyttes til å identifisere besøkende på nettsiden. 
+        Se Google Analytics for informasjon om Googles personvernhåndtering.<br><br>
+        
+        <b>Utleveres informasjon til tredjepart?</b><br>
+        Personopplysninger utleveres ikke til tredjepart.<br><br>
+        
+        <b>Rettigheter</b><br>
+        Dersom du mener at Itema AS ikke har overholdt dine rettigheter i henhold til personopplysningsloven, har du rett til å klage til Datatilsynet. Se www.datatilsynet.no for kontaktinformasjon.<br><br>
+        
+        <b>Kontaktinformasjon</b><br>
+        Kontaktperson for personvernerklæringen er:<br>
+        
+        Lone Madsen, Daglig leder Itema AS.<br>
+        <a href="mailto: lma@itema.no">lma@itema.no</a>
+      </section>
+      <footer class="modal-card-foot">
+        
+      </footer>
+     </div>
+    </ng-template>
