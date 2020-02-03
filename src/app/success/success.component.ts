@@ -1,5 +1,4 @@
-import { Component, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Post } from '../models/post';
 import { PostService } from '../services/post.service';
@@ -14,22 +13,13 @@ export class SuccessComponent implements OnInit, OnDestroy {
 
   closeResult: string;
 
-  private fragment: string;
-
   private subscription: Subscription = new Subscription();
   successStories: Post[];
 
   constructor(
-    private service: PostService,
-    router: Router,
-    private route: ActivatedRoute) {}
+    private service: PostService) {}
 
   ngOnInit() {
-
-    this.route.fragment.subscribe(fragment => {
-      this.fragment = fragment;
-      console.log('ngOnInit: fragment: ', this.fragment);
-    });
 
     this.subscription.add(this.service.getSuccessStories().subscribe(stories => {
       let successStoryRow = [];
@@ -48,9 +38,7 @@ export class SuccessComponent implements OnInit, OnDestroy {
   }
 
   getImgPath(title: string): string {
-    const res = './assets/img/' + title.replace(' ', '').toLowerCase();
-    console.log('res:', res);
-    return res;
+    return './assets/img/' + title.replace(' ', '').toLowerCase();
   }
 
   ngOnDestroy(): void {

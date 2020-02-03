@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Post } from '../models/post';
 import { PostService } from '../services/post.service';
@@ -13,11 +12,7 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
 
   @ViewChild('mapContainer', {static: false}) gmap: ElementRef;
 
-  title = 'Itema';
-
   successStoryRows = [];
-
-  closeResult: string;
 
   hover: number;
 
@@ -39,21 +34,13 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
     clickable: true,
   });
 
-  private fragment: string;
-
   private subscription: Subscription;
   successStories: Post[];
 
   constructor(
-    private service: PostService,
-    private router: Router,
-    private route: ActivatedRoute) {}
+    private service: PostService) {}
 
   ngOnInit() {
-
-    this.route.fragment.subscribe(fragment => {
-      this.fragment = fragment;
-    });
 
     this.subscription = this.service.getProfiledSuccessStories().subscribe(stories => {
       let successStoryRow = [];
@@ -68,7 +55,6 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
         }
       }
     });
-
   }
 
   mapInitializer() {

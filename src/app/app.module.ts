@@ -16,7 +16,8 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { SuccessComponent } from './success/success.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { FragmentPolyfillModule } from './fragment-polyfill.module';
+import { Ng2OdometerModule } from 'ng2-odometer';
 
 const routes: Routes = [
   {path: '' , redirectTo: '/home', pathMatch: 'full'},
@@ -51,6 +52,10 @@ const routerOptions: ExtraOptions = {
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     OverlayModule,
+    Ng2OdometerModule.forRoot(),
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
   ],
   exports: [RouterModule],
 
