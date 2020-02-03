@@ -280,8 +280,9 @@
   }
 
   .carreer {
-    background-image: url('/assets/img/jobbhososs.jpg');
-    height: 490px;
+    background-image: url('/assets/img/itemahuy-101.jpg');
+    min-height: 490px;
+    height: auto;
     width: 100%;
     margin: 0 auto;
     background-position: center;
@@ -444,23 +445,6 @@
       margin-top: 0px;
     }
 
-    ul {
-      list-style: disc inside;
-      margin-top: -10px;
-      margin-bottom: 20px;
-      list-style-type: disc;
-    }
-    span.s1 {
-      list-style-position: outside;
-      list-style: outside;
-      
-    }
-
-    .wp-block-image>ul>li .s1 {
-      padding-top: -20px;
-      padding-bottom: 20px;
-    }
-    
     .map-container-outer {
       width: 100%;
     }
@@ -484,11 +468,35 @@
       padding: 0px 0px 0px 0px;
     }    
       
-    ul li .bullet {
-      display:inline-block; 
-      list-style: circle;
-      }
+    ul {
+      list-style: disc inside;
+      list-style-type: disc;
+      margin-top: -15px!important;
+      padding-left: 2px!important;
+    }
 
+    ul li {
+      margin-left: 15px!important;
+      list-style-position: inside;
+      list-style: disc;
+    }
+
+    span.s1 {
+      list-style-position: outside;
+      list-style: outside;
+    }
+
+    .header-list {
+      margin-left: 0px;
+      list-style-position: inside;
+      list-style: none;
+    }
+
+    .header-ul {
+      margin-top: 0px!important;
+      list-style: none;
+    }
+  
     .anchor {
       display: block;
       position: relative;
@@ -496,119 +504,122 @@
       visibility: hidden;
     }
       
+    .success {
+      background-color: white;
+      padding: 3px 3px 3px 3px;
+      min-width: 50px;
+      min-height: 180px;
+    }
+    #success-2-div {
+      transition: 0.5s;
+    }
+    #success-2-div:hover {
+      background-image: url('/assets/img/network_background.jpg');
+      background-size: cover;
+      transition: 0.5s;
+    }
 
-      
-        .success {
-          background-color: white;
-          padding: 3px 3px 3px 3px;
-          min-width: 50px;
-          min-height: 180px;
-        }
-        #success-2-div {
-          transition: 0.5s;
-        }
-        #success-2-div:hover {
-          background-image: url('/assets/img/network_background.jpg');
-          background-size: cover;
-          transition: 0.5s;
-        }
-        .img {
-          min-width: 50px;
-        }
-        .panel {
-          width: 200px;
-          float: left;
-        }
-      
+    .success-padding {
+      padding-left: 30px!important;
+    }
 
-        .bg-white {
-          background-color: white;
-        }
-      
-        .bg-light-gray {
-          background-color: #EFEFEF;
-        }  
-        .bg-gray {
-          // background-color: #E9E7E6;
-          background-color: #e4e4e5;
-        }
-        .bg-green {
-          background-color: #D1E4EF;
-        }
-        .bg-dark-gray {
-          background-color: #58585B;
-        }
-        .bg-dark-blue {
-          background-color: #003851;
-        }
-        .blue-header {
-          color: #003851;
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-        .blue-article {
-          font-size: 100%;
-          line-height: 20px;
-        }
-        .white-header {
-          color: white;
-        }
-        .section-header {
-          width: 100%;
-          font-size: 110%;
-          text-transform: uppercase;
-          font-weight: bold;
-          padding: 50px 0px 10px 0px;
-          margin: 0px 0px 0px 0px;
-        }
-        .i-box {
-          padding: 0px 5px 0px 5px;
-          margin: 0px 0px 0px 0px;
-        }
-      
-      
-        .contact-image {
-          float:left; 
-        }
-      
-        .contact-info {
-          float:left; 
-          padding-left: 20px; 
-          padding-top: 18px;
-          line-height: 120%;
-        }
-      
-        .thumb-text {
-          height: 110px;
-          line-height: 110px;
-          opacity: 0;
-          font-size: 120%;
-          text-align: center;
-          overflow: hidden;
-          padding: 3px 3px 3px 3px;
-          z-index: 1000;
-          color: white;
-          transition: 1.0s;
-          text-decoration: none !important;
-      
-        }
-        .thumb-text:hover {
-          opacity: 1;
-          transition: 1.0s;
-          text-decoration: none !important;
-        }
+    .img {
+      min-width: 50px;
+    }
+    .panel {
+      width: 200px;
+      float: left;
+    }
+  
 
-        ul.a {
-          padding-left: 16px;
-          list-style-position: inside;
-          list-style: outside;
-        }
+    .bg-white {
+      background-color: white;
+    }
+  
+    .bg-light-gray {
+      background-color: #EFEFEF;
+    }  
+    .bg-gray {
+      // background-color: #E9E7E6;
+      background-color: #e4e4e5;
+    }
+    .bg-green {
+      background-color: #D1E4EF;
+    }
+    .bg-dark-gray {
+      background-color: #58585B;
+    }
+    .bg-dark-blue {
+      background-color: #003851;
+    }
+    .blue-header {
+      color: #003851;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .blue-article {
+      font-size: 100%;
+      line-height: 20px;
+    }
+    .white-header {
+      color: white;
+    }
+    .section-header {
+      width: 100%;
+      font-size: 110%;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 50px 0px 10px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    .i-box {
+      padding: 0px 5px 0px 5px;
+      margin: 0px 0px 0px 0px;
+    }
+  
+  
+    .contact-image {
+      float:left; 
+    }
+  
+    .contact-info {
+      float:left; 
+      padding-left: 20px; 
+      padding-top: 18px;
+      line-height: 120%;
+    }
+  
+    .thumb-text {
+      height: 110px;
+      line-height: 110px;
+      opacity: 0;
+      font-size: 120%;
+      text-align: center;
+      overflow: hidden;
+      padding: 3px 3px 3px 3px;
+      z-index: 1000;
+      color: white;
+      transition: 1.0s;
+      text-decoration: none !important;
+  
+    }
+    .thumb-text:hover {
+      opacity: 1;
+      transition: 1.0s;
+      text-decoration: none !important;
+    }
 
-        .mx-0 {
-          margin: 0px 0px 0px 0px;
-          padding: 0px 0px 0px 0px;
-        }    
-      
+    ul.a {
+      padding-left: 16px;
+      list-style-position: inside;
+      list-style: outside;
+    }
+
+    .mx-0 {
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 0px 0px;
+    }    
+  
 
 
   .logo-container {
@@ -674,14 +685,6 @@ nav .navbar-nav li a:hover, nav .navbar-nav li a:focus, nav .navbar-nav li a.act
     color: #EE7219;
 }
 
-.modal {
-  pointer-events: none !important;
-}
-
-.modal-content {
-  pointer-events: all !important;
-}
-
 .overlay-card {
   padding-left: 30px;
   padding-right: 30px;
@@ -690,14 +693,24 @@ nav .navbar-nav li a:hover, nav .navbar-nav li a:focus, nav .navbar-nav li a.act
 .modal-background {
   background-color: rgba(0,0,0,0.0);
   width: 100%;
-  height: 300%;
+  height: 100%;
+}
+
+.ok-button {
+  background-color: #003851 !important;
+  width: 100px !important;
+  color: white;
+}
+.ok-button:hover {
+  color: #efefef;
 }
 
 @media (max-width: 767px) {
 
   .modal-card {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 0px 0px 0px 0px;
+    z-index: 1000;
+    background-color: blue !important;
   }
   .modal-background {
     background-color: rgba(0,0,0,0.0);
@@ -705,7 +718,7 @@ nav .navbar-nav li a:hover, nav .navbar-nav li a:focus, nav .navbar-nav li a.act
     height: 400%;
     overflow: hidden;
   }
-  
+
   .main-image { 
     text-align: center;
     background-image: url('/assets/img/phone_header.jpg');
@@ -753,6 +766,7 @@ nav .navbar-nav li a:hover, nav .navbar-nav li a:focus, nav .navbar-nav li a.act
   .carreer-inner {
     margin: 0px 0px 0px 0px;
     width: 100%;
+    height: auto;
   }
 
   .navbar .navbar-nav {

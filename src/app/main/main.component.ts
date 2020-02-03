@@ -34,8 +34,8 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
   marker = new google.maps.Marker({
     position: this.coordinates,
     map: this.map,
-    title: 'Itema as',
-    label: 'Itema as',
+    title: '',
+    label: '',
     clickable: true,
   });
 
@@ -55,7 +55,7 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
       this.fragment = fragment;
     });
 
-    this.subscription = this.service.getSuccessStories().subscribe(stories => {
+    this.subscription = this.service.getProfiledSuccessStories().subscribe(stories => {
       let successStoryRow = [];
       let i = 0;
       this.successStories = stories;

@@ -22,9 +22,9 @@ export class FooterComponent implements OnInit {
 
   openWithTemplate(tpl: TemplateRef<any>) {
     const configs = new OverlayConfig({
-      hasBackdrop: true,
+      hasBackdrop: false,
       panelClass: ['modal', 'is-active'],
-      backdropClass: 'modal-background',
+      backdropClass: 'modal-background'
      });
 
     this.overlayRef = this.overlay.create(configs);
@@ -36,6 +36,7 @@ export class FooterComponent implements OnInit {
   }
 
   close(){
+    console.log('closed');
     this.overlayRef.dispose();
   }
 

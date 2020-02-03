@@ -16,7 +16,7 @@ export class PostService {
   }
 
   getProfiledSuccessStories(): Observable<Post[]> {
-    return this.getPostsByCategory('5');
+    return this.getPostsByCategory('41');
   }
 
   getConsultants(): Observable<Post[]> {
