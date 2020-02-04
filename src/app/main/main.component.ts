@@ -2,6 +2,7 @@ import { Component, AfterViewInit, OnInit, ViewChild, ElementRef, OnDestroy } fr
 import { Subscription } from 'rxjs';
 import { Post } from '../models/post';
 import { PostService } from '../services/post.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main-component',
@@ -34,6 +35,8 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
     clickable: true,
   });
 
+  experience: number;
+
   private subscription: Subscription;
   successStories: Post[];
 
@@ -41,7 +44,7 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
     private service: PostService) {}
 
   ngOnInit() {
-
+    this.experience = this.getExperience();
     this.subscription = this.service.getProfiledSuccessStories().subscribe(stories => {
       let successStoryRow = [];
       let i = 0;
@@ -82,6 +85,17 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
+    }
+  }
+
+  private getExperience() {
+    const startDate = environment.config.experienceStartDate;
+    const exp = (new Date().getTime() - new Date(startDate).getTime()) / 29030400000;
+    const res = Math.round(exp * environment.config.noOfConsultants);
+    if (res > 400) {
+      return res;
+    } else {
+      return 432;
     }
   }
 
