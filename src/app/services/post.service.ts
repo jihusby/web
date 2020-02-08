@@ -20,7 +20,6 @@ export class PostService {
   }
 
   getConsultants(): Observable<Post[]> {
-    console.log('1 getConsultants');
     return this.getPostsByCategory('3');
   }
 
@@ -39,7 +38,6 @@ export class PostService {
   getPostsByCategory(categories: string): Observable<Post[]> {
     const httpParams = new HttpParams()
         .set('categories', categories);
-    console.log('2 getPostsByCategory');
     return this.http.get<Post[]>(environment.config.api + 'posts', {
         params: httpParams
     });

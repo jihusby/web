@@ -20,9 +20,9 @@ import { FragmentPolyfillModule } from './fragment-polyfill.module';
 import { Ng2OdometerModule } from 'ng2-odometer';
 
 const routes: Routes = [
-  {path: '' , redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home' , component: MainComponent},
-  {path: 'customer-stories' , component: SuccessComponent},
+  {path: '' , redirectTo: '/hjem', pathMatch: 'full'},
+  {path: 'hjem' , component: MainComponent},
+  {path: 'kundehistorier' , component: SuccessComponent},
 ];
 
 const routerOptions: ExtraOptions = {

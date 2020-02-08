@@ -28,7 +28,6 @@ export class ApiService {
     if (story._embedded['wp:featuredmedia'] !== (null || undefined)) {
       imgMedium = story._embedded['wp:featuredmedia']['0'].source_url;
     }
-    console.log(story.content);
     return {
       id: story.id,
       title: story.title,

@@ -17,6 +17,7 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
 
   hover: number;
 
+  infoWindow: google.maps.InfoWindow;
   map: google.maps.Map;
   lat = 63.412467;
   lng = 10.445946;
@@ -61,10 +62,21 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   mapInitializer() {
-    this.map = new google.maps.Map(this.gmap.nativeElement,
-      this.mapOptions);
-    this.marker.setMap(this.map);
-    }
+  this.infoWindow = new google.maps.InfoWindow();
+  this.infoWindow.setContent('<b>Itema AS</b> Brøsetvegen 164B, 7069 TRONDHEIM');
+  this.infoWindow.setPosition(this.marker.getPosition());
+  this.map = new google.maps.Map(this.gmap.nativeElement,
+    this.mapOptions);
+  this.marker.setMap(this.map);
+
+  google.maps.event.addListener(this.marker, 'mouseover', ($event) => {
+    this.infoWindow.open(this.map, this.marker);
+    });
+
+  google.maps.event.addListener(this.marker, 'mouseout', ($event) => {
+    this.infoWindow.close();
+    });
+  }
 
   getIndex(u: number, i: number) {
     const res = (u % 3) + i;
@@ -92,10 +104,10 @@ export class MainComponent implements AfterViewInit, OnInit, OnDestroy {
     const startDate = environment.config.experienceStartDate;
     const exp = (new Date().getTime() - new Date(startDate).getTime()) / 29030400000;
     const res = Math.round(exp * environment.config.noOfConsultants);
-    if (res > 400) {
+    if (res > 600) {
       return res;
     } else {
-      return 432;
+      return 606;
     }
   }
 

@@ -31,7 +31,6 @@ export class AppComponent implements AfterViewInit, OnInit {
    }
 
   navigate(id: string) {
-    console.log('id:', id);
     this.router.navigate(['/'], {fragment: id});
   }
 
